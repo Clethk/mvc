@@ -4,7 +4,7 @@ class User {
     private $name;
 
     function getUser($username, $password){
-        //return $this->name = ucfirst($name);
+
         // Connect to the database:
         $dbc = mysqli_connect('localhost', 'root', '', 'sem7');
         $q = "SELECT * FROM users WHERE Username='$username'";

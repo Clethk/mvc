@@ -13,7 +13,7 @@
 <body>
 
 
-<form action="http://localhost/testingphp/sessions/mvc/public/users/signinhandler" method="post">
+<form action="http://localhost/testingphp/sessions/mvcgit/public/users/login" method="post">
     <fieldset>
         <legend>Login</legend>
         <input type="text" name="Username" placeholder="Username">

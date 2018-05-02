@@ -14,10 +14,12 @@ class UsersController extends Controller{
         $model = $this->model('User');
         $data = $model->getUser($username, $password);
         if($data){
-            echo "Welcome " .$data['Username'];
 
+            $this->view ('home/welcome', $data);
         } else {
-            echo "$username does not exist in our system";
+            $error = ['error' => "Something's wrong with your login, please try again"];
+            $this->view('login', $error );
+            // echo "$username does not exist in our system";
         }
 
 
@@ -31,12 +33,7 @@ class UsersController extends Controller{
         $this->view('home/signin');
 
     }
-    public function signinhandler(){
-        $username= $_POST['Username'];
-        $password = $_POST['Password'];
-        $this->login($username, $password);
 
-    }
 
 
 
